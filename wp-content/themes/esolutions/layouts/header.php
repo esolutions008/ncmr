@@ -62,7 +62,7 @@
               <li><a href="/services"><span class="text-lato">SERVICES</span><br /><small>事業内容</small></a></li>
               <li><a href="/projects"><span class="text-lato">PROJECTS</span><br /><small>プロジェクト</small></a></li>
               <li><a href="/members"><span class="text-lato">MEMBERS</span><br /><small>メンバー</small></a></li>
-              <li><a href="/recruit"><span class="text-lato">RECRUIT</span><br /><small>採用情報</small></a></li>
+              <li><a href="/recruit"><span class="text-lato">RECRUIT</span><br /><small>採用</small></a></li>
               <li><a href="/company"><span class="text-lato">COMPANY</span><br /><small>会社概要</small></a></li>
               <li><a href="/projects-tag/english" style="position:relative;top:-8px;"><span class="text-lato">EN</span></a></li>
             </ul>
