@@ -1,0 +1,137 @@
+
+// _style.scss
+// -----------------------------------
+
+// Header
+// -----
+
+.main-header {
+  text-align: center;
+  border-top: 4px solid $brand-primary;
+  position: relative;
+  padding: $spacer-y 0;
+  border-bottom: 1px solid #ddd;
+  .sidr-trigger { position: absolute;right: $spacer-x; top: $spacer-y; }
+  nav {
+    @include media-breakpoint-down(sm) { display: none; }
+    @extend .pull-md-right;
+    ul { @extend .text-xs-center; margin-bottom: 0; }
+    li {
+      list-style: none;
+      display: inline-block;
+      line-height: 1.4;
+      a {
+        display: block;
+        padding: $spacer-y * .2 $spacer-x * .8 0;
+        &:hover { text-decoration: none; color: $brand-primary; }
+        &.active { font-weight: 700; color: $brand-primary; }
+      }
+    }
+  }
+  .brand {
+    text-align: left;
+    @include media-breakpoint-down(sm) { img { max-height: 30px; } }
+  }
+}
+
+// Footer
+// -----
+
+.gotop {
+  text-align: right;
+  @include clearfix();
+  padding: 0 $spacer-x;
+  .btn { @include border-radius(4px 4px 0 0); padding: $spacer-y $spacer-x $spacer-y /2; }
+}
+.main-footer {
+  padding-top: $spacer-y * 2;
+  padding-bottom: $spacer-y * 2;
+  background: $brand-primary;
+  color: #fff;
+  position: relative;
+  a { color: #fff; }
+}
+
+// Side Panel
+// -----
+
+.sidr {
+  background: $brand-primary;
+  color: #fff;
+  a { color: #fff; }
+  .nav-item {
+    border-bottom: 1px solid lighten($brand-primary, 6%);
+    padding: $spacer-y $spacer-x;
+    &:first-child { border-top: 1px solid lighten($brand-primary, 6%); }
+  }
+}
+
+// Main Visual
+// -----
+.mv {
+  background: $brand-primary;
+  color: #fff;
+  padding: $spacer-y * 4 0;
+  @include media-breakpoint-down(sm) { padding: $spacer-y * 2 0; }
+}
+
+// Main
+// -----
+
+main {
+  // background: #FBFBFB;
+  // border-top: 1px solid #eee;
+  // padding: $spacer-y * 3 0;
+  // @include media-breakpoint-down(sm) { padding: $spacer-y * 2 0; }
+  h1 {
+    color: $brand-primary;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-bottom: $spacer-y * 3;
+    @include media-breakpoint-down(sm) { font-size: 1.6rem; letter-spacing: .3rem; }
+    small { font-family: $font-family-sans-serif; margin-left: $spacer-x / 2; font-size: $font-size-sm; letter-spacing: .2rem; color: #333; }
+  }
+    + .main-footer { margin-top: 0; }
+}
+
+article {
+  h1 { font-size: 1.6rem; letter-spacing: 0; color: $body-color; font-weight: 700; }
+  h2 { color: $brand-primary; }
+  h3 { border-bottom: 1px solid $hr-border-color; padding-bottom: $spacer-y * .7; }
+}
+
+// Home
+// -----
+
+.owl-carousel-mv-index {
+  margin-bottom: $spacer-y * 2;
+}
+
+// News
+// -----
+.card-news {
+  dt { cursor: pointer; font-weight: 400; > * { margin-bottom: 0; } }
+  dd { margin-top: $spacer-y; display: none; > * { margin-bottom: 0; + * { margin-top: $spacer-y; } }  }
+}
+
+// Projects
+// -----
+
+.slideshare {
+  width: 597px;
+  height: 486px;
+  max-width: 100%;
+  @include media-breakpoint-down(sm) { height: 260px; }
+}
+.child-m-r-h a { margin-right: $spacer-x * .5; display: inline-block; }
+
+// Inquiry
+// -----
+.screen-reader-response[role="alert"] { display: none; }
+.wpcf7-not-valid-tip { color: $brand-danger; }
+.ajax-loader { display: none; }
+.wpcf7-validation-errors { text-align: center; margin-top: $spacer-y; color: lighten($brand-danger,20%); }
+.wpcf7-form-control-wrap { display: block; + .wpcf7-form-control-wrap { margin-top: $spacer-y * .5; } }
+

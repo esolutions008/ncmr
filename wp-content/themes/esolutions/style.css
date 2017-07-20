@@ -1,0 +1,14 @@
+/*
+Theme Name: イーソリューションズ株式会社
+Author: RETROMEME Ltd.
+Author URI: http://retromeme.jp/
+Version: 1.0
+*/
+
+.child-m-r-h a {
+  margin-right: 0.5rem;
+  display: inline-block; }
+
+.main-header-english nav li a{
+  padding: 0.65rem 0.8rem;
+}

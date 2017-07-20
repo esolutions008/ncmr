@@ -1,0 +1,137 @@
+
+// _mixins.scss
+// -----------------------------------
+
+// Table Layout
+@mixin display-table($valign:middle) {
+  display: table;
+  width: 100%;
+  > * {
+    display: table-cell;
+    vertical-align: $valign;
+    position: relative;
+  }
+}
+
+// Responsive Table
+@mixin table-block() {
+  border: none;
+  border-bottom: 1px solid $table-border-color;
+  th, td { display: block; border: 1px solid $table-border-color; border-bottom: none; width: 100%; }
+}
+
+// Table Style Form
+@mixin fieldset-table() {
+  border-bottom: 1px solid $hr-border-color;
+  margin-bottom: $spacer * 1.5;
+  .form-group {
+    @include display-table(top);
+    border: 1px solid $hr-border-color;
+    border-bottom: none;
+    margin-bottom: 0;
+    .cell {
+      padding: $spacer;
+      > * { margin-bottom: 0; + * { margin-top: $spacer / 2; } }
+      + .cell { border-left: 1px solid $hr-border-color; }
+      &.cell-heading {
+        background: #f7f7f7;
+        width: 25%;
+        &.cell-heading-md-1 { width: 8.333333333% }
+        &.cell-heading-md-2 { width: 16.666666667% }
+        &.cell-heading-md-3 { width: 25% }
+        &.cell-heading-md-4 { width: 33.33333333% }
+        &.cell-heading-md-5 { width: 41.6666667% }
+        &.cell-heading-md-6 { width: 50% }
+      }
+    }
+  }
+}
+@mixin fieldset-table-responsive() {
+  border-bottom: 1px solid $hr-border-color;
+  .form-group {
+    margin-bottom: 0;
+    .cell {
+      padding: $spacer;
+      width: 100%;
+      border: 1px solid $hr-border-color;
+      border-bottom: none;
+      margin-bottom: 0;
+      > * { margin-bottom: 0; }
+      &.cell-heading { background: #f7f7f7; width: 100%; }
+    }
+  }
+}
+
+// Box Sizing
+@mixin box-sizing($type) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+// Justified nav links
+// -------------------------
+
+@mixin nav-justified {
+  width: 100%;
+
+  .nav-item {
+    float: none;
+  }
+
+  .nav-link {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  > .dropdown .dropdown-menu { //todo: remove child selector
+    top: auto;
+    left: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .nav-item {
+      display: table-cell;
+      width: 1%;
+    }
+    .nav-link {
+        margin-bottom: 0;
+    }
+  }
+}
+
+// Move borders to anchors instead of bottom of list
+//
+// Mixin for adding on top the shared `.nav-justified` styles for our tabs
+@mixin nav-tabs-justified {
+  border-bottom: 0;
+
+  .nav-link {
+    // Override margin from .nav-tabs
+    margin-right: 0;
+    border-radius: $border-radius;
+  }
+
+  .nav-link.active,
+  .nav-link.active:hover,
+  .nav-link.active:focus {
+    border: 1px solid $nav-tabs-justified-link-border-color;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .nav-link {
+      border-bottom: 1px solid $nav-tabs-justified-link-border-color;
+      border-radius: $border-radius $border-radius 0 0;
+    }
+   .nav-link.active,
+   .nav-link.active:hover,
+   .nav-link.active:focus {
+      border-bottom-color: $nav-tabs-justified-active-link-border-color;
+    }
+  }
+}
+
+.nav-justified {
+  @include nav-justified;
+  @include nav-tabs-justified;
+}

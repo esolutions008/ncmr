@@ -1,0 +1,100 @@
+
+// _config.scss
+// -----------------------------------
+
+// Themes
+// -----
+
+$body-bg:                       #fff !default;
+$gray-dark:                     #373a3c !default;
+$gray:                          #55595c !default;
+$gray-light:                    #818a91 !default;
+$gray-lighter:                  #eceeef !default;
+$gray-lightest:                 #f7f7f9 !default;
+$body-color:                    $gray-dark !default;
+$brand-primary:                 #5381C2 !default;
+$link-color:                    $body-color !default;
+
+// Components Border Radius
+// -----
+
+$border-radius:                 0 !default;
+$border-radius-lg:              0 !default;
+$border-radius-sm:              0 !default;
+
+// Type
+// -----
+
+// Font Family
+$font-family-sans-serif:        游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', Arial, メイリオ, Meiryo, sans-serif !default;
+$font-family-serif:             "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif !default;
+
+// Font Size
+$font-size-root:                14px !default;
+$font-size-lg:                  1.05rem !default;
+$font-size-xs:                  .76rem !default;
+$font-size-h1:                  1.8rem !default;
+$font-size-h2:                  1.4rem !default;
+$font-size-h3:                  1.2rem !default;
+$font-size-h4:                  1.15rem !default;
+$font-size-h5:                  1.1rem !default;
+$font-size-h6:                  1rem !default;
+
+$jumbotron-padding:             0 !default;
+$jumbotron-bg:                  #fff !default;
+
+$line-height-base:              2 !default;
+
+// Spacing
+// -----
+
+$spacer:                        1rem !default;
+$spacer-x:                      $spacer !default;
+$spacer-y:                      $spacer !default;
+$dropdown-margin-top:           0 !default;
+$headings-font-weight:          700 !default;
+$headings-margin-bottom:        $spacer * 1.5 !default;
+$card-spacer-x:                 $spacer !default;
+$card-spacer-y:                 $spacer !default;
+
+// Breadcrumbs
+// -----
+
+$breadcrumb-padding-y:          0 !default;
+$breadcrumb-padding-x:          0 !default;
+$breadcrumb-item-padding:       0 !default;
+$breadcrumb-bg:                 none !default;
+$breadcrumb-divider-color:      #666 !default;
+$breadcrumb-active-color:       #888 !default;
+$breadcrumb-divider:            '\f2fb' !default;
+
+// Form
+// -----
+
+$form-group-margin-bottom:      $spacer-y !default;
+
+// Cards
+// -----
+$card-border-radius:            0 !default;
+
+// Dropdown
+// -----
+$dropdown-padding-y:             5px !default;
+$dropdown-margin-top:            2px !default;
+$dropdown-item-padding-x:        20px !default;
+
+
+// Nav
+// -----
+
+$nav-pills-border-radius:       0 !default;
+$nav-pills-active-link-color:   $body-color !default;
+$nav-pills-active-link-bg:      transparent !default;
+
+// Navbar
+// ------
+
+$navbar-border-radius:              0 !default;
+$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-brand-padding-y:            .25rem !default;
